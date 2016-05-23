@@ -8,8 +8,8 @@
   month '11'
   weekday '1-5'
   environment {"aws_access_key_id" => "#{ node[:deploy]['scripts'][:environment_variables][:aws_access_key_id]}",
-				"aws_secret_access_key" => "#{ node[:deploy]['scripts'][:environment_variables][:aws_secret_access_key],
-				"region" => "#{ node[:deploy]['scripts'][:environment_variables][:region]}}
+				"aws_secret_access_key" => "#{ node[:deploy]['scripts'][:environment_variables][:aws_secret_access_key]}",
+				"region" => "#{ node[:deploy]['scripts'][:environment_variables][:region]}"}
   command "aws s3 sync /mnt/nfs s3://mybucket.deyan "
   action :create
 end
