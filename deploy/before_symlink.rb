@@ -6,7 +6,7 @@ env = Hash["AWS_ACCESS_KEY_ID" => "#{ node[:deploy]['scripts'][:environment_vari
 
 cron 'name_of_cron_entry' do
 	user 'deply'
-	minute '0-59'
+	minute '30'
 	hour '*'
 	day '*'
 	month '*'
