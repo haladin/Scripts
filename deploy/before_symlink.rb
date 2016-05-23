@@ -5,8 +5,7 @@ env = Hash["AWS_ACCESS_KEY_ID" => "#{ node[:deploy]['scripts'][:environment_vari
 				"REGION" => "#{ node[:deploy]['scripts'][:environment_variables][:region]}"]
 
 cron 's3_sync' do
-	user 'deply'
-	minute '0-59'
+	hour '17'
 	environment env
 	command "aws s3 sync /mnt/nfs s3://mybucket.deyan"
 	action :create
