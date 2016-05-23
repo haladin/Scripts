@@ -12,6 +12,6 @@ cron 'name_of_cron_entry' do
 	month '*'
 	weekday '*'
 	environment env
-	command "aws s3 sync /mnt/nfs s3://mybucket.deyan "
+	command "aws s3 sync /mnt/nfs s3://mybucket.deyan"
 	action :create
 end
