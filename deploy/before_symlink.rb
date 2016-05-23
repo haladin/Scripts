@@ -4,7 +4,7 @@ env = Hash["AWS_ACCESS_KEY_ID" => "#{ node[:deploy]['scripts'][:environment_vari
 				"AWS_SECRET_ACCESS_KEY" => "#{ node[:deploy]['scripts'][:environment_variables][:AWS_SECRET_ACCESS_KEY]}",
 				"REGION" => "#{ node[:deploy]['scripts'][:environment_variables][:region]}"]
 
-cron 'name_of_cron_entry' do
+cron 's3_sync' do
 	user 'deply'
 	minute '0-59'
 	environment env
